@@ -3,7 +3,7 @@ package com.example.controller;
 import com.example.controller.request.AddTaskRequest;
 import com.example.controller.response.AddTaskResponse;
 import com.example.database.domain.Task;
-import com.example.service.TaskService;
+import com.example.database.service.TaskService;
 import com.example.utils.ValidationUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,7 +30,7 @@ public class TaskController {
     }
 
     @RequestMapping(value = "/api/addTask", method = RequestMethod.POST)
-    public AddTaskResponse addIncome(HttpServletResponse httpResponse,
+    public AddTaskResponse addTask(HttpServletResponse httpResponse,
                                      @RequestBody(required = false) AddTaskRequest request) {
         AddTaskResponse response = ValidationUtils.addTaskRequestValid(request);
         if (!response.getSuccess()) {

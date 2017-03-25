@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.database.service;
 
 import com.example.database.domain.Task;
 import com.example.database.repository.TaskRepository;
